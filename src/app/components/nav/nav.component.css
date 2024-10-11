@@ -5,7 +5,7 @@
 .sidenav {
     width: 13rem;
     color: white;
-    background: linear-gradient(90deg, rgba(108,4,142,1) 0%, rgba(201,6,46,1) 100%);
+    background:  rgba(108,4,142,1) ;
 }
 
 .sidenav a {
@@ -16,10 +16,16 @@
     margin-right: .6rem;
 }
 
+img {
+    width: 100%;
+    height: 7rem;
+    margin: .8rem auto 1rem auto;
+ }
+ 
 .menu {
     margin: 1rem 0 0 1rem;
     color: white;
-    background: linear-gradient(90deg, rgba(108,4,142,1) 0%, rgba(201,6,46,1) 100%);
+    background: linear-gradient(90deg, rgba(201,6,46,1) 0%,  rgba(108,4,142,1) 100%);
     margin-top: -80px !important;
     position: absolute;
 }
