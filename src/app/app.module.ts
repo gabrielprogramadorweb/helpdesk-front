@@ -38,6 +38,7 @@ import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecn
 
 // Interceptors
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
+import { ConfirmDialogComponent } from './components/tecnico/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
     TecnicoCreateComponent,
     LoginComponent,
     TecnicoDeleteComponent,
-    TecnicoUpdateComponent
+    TecnicoUpdateComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,

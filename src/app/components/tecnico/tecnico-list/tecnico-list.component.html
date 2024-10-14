@@ -40,8 +40,8 @@
                <a routerLink="update/{{ element.id }}">
                   <i class="material-icons edit">edit</i>
                </a>
-               <a routerLink="delete/{{ element.id }}">
-                  <i class="material-icons delete">delete</i>
+               <a (click)="openDeleteModal(element)">
+                  <i style="cursor: pointer;" class="material-icons delete">delete</i>
                </a>
             </td>
          </ng-container>
@@ -52,5 +52,12 @@
 
       <mat-paginator [pageSizeOptions]="[5, 2, 10, 20, 50, 100]" showFirstLastButtons></mat-paginator>
    </div>
+
+   <!-- Modal de Confirmação -->
+   <app-confirm-dialog
+     [isVisible]="isModalVisible"
+     [tecnicoNome]="tecnicoParaDeletar?.nome"
+     (confirmed)="handleConfirmation($event)">
+   </app-confirm-dialog>
 
 </div>
