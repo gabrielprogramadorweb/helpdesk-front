@@ -19,8 +19,6 @@ const routes: Routes = [
       { path: 'tecnicos/create',     component: TecnicoCreateComponent },
       { path: 'tecnicos/update/:id', component: TecnicoUpdateComponent },
       { path: 'tecnicos/delete/:id', component: TecnicoDeleteComponent },
-
-      
     ]
   }
 ];
