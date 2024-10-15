@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { AppRoutingModule } from './app-routing.module';
 
-// Angular Material Modules
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// Para trabalhar com formulários no Angular 12
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+
+// Para realizar requisições HTTP
+import { HttpClientModule } from '@angular/common/http';
+
+// Imports para componentes do Angular Material
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -21,28 +27,27 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 
-// Toastr and Mask Modules
-import { ToastrModule } from 'ngx-toastr';
-import { NgxMaskModule } from 'ngx-mask';
-
-// Components
-import { AppComponent } from './app.component';
+// Componentes do projeto
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
 import { LoginComponent } from './components/login/login.component';
-import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
-import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component'
-import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
-
-// Interceptors
+import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
-import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
-import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
+import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
+import { NgxMaskModule } from 'ngx-mask';
+import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
+import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
-import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
+import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
+import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
+import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -51,24 +56,30 @@ import { ClienteDeleteComponent } from './components/cliente/cliente-delete/clie
     HomeComponent,
     HeaderComponent,
     TecnicoListComponent,
-    TecnicoCreateComponent,
     LoginComponent,
-    TecnicoDeleteComponent,
+    TecnicoCreateComponent,
     TecnicoUpdateComponent,
-    ConfirmDialogComponent,
-    ClienteListComponent,
+    TecnicoDeleteComponent,
     ClienteCreateComponent,
+    ClienteDeleteComponent,
+    ClienteListComponent,
     ClienteUpdateComponent,
-    ClienteDeleteComponent
+    ChamadoListComponent,
+    ChamadoCreateComponent,
+    ChamadoUpdateComponent,
+    ChamadoReadComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule,
+    // Forms
     FormsModule,
     ReactiveFormsModule,
-    // Angular Material Modules
+    // Requisições http
+    HttpClientModule,
+    // Angular Material
     MatFormFieldModule,
     MatPaginatorModule,
     MatCheckboxModule,
@@ -83,13 +94,11 @@ import { ClienteDeleteComponent } from './components/cliente/cliente-delete/clie
     MatIconModule,
     MatListModule,
     MatCardModule,
-    // Toastr Module
     ToastrModule.forRoot({
       timeOut: 4000,
       closeButton: true,
       progressBar: true
     }),
-    // NgxMask Module
     NgxMaskModule.forRoot()
   ],
   providers: [AuthInterceptorProvider],
