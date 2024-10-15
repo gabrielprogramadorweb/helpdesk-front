@@ -38,7 +38,11 @@ import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecn
 
 // Interceptors
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
-import { ConfirmDialogComponent } from './components/tecnico/confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
+import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +55,11 @@ import { ConfirmDialogComponent } from './components/tecnico/confirm-dialog/conf
     LoginComponent,
     TecnicoDeleteComponent,
     TecnicoUpdateComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    ClienteListComponent,
+    ClienteCreateComponent,
+    ClienteUpdateComponent,
+    ClienteDeleteComponent
   ],
   imports: [
     BrowserModule,

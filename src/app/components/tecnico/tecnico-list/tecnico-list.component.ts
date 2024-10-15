@@ -13,12 +13,11 @@ import { TecnicoService } from 'src/app/services/tecnico.service';
 export class TecnicoListComponent implements OnInit {
 
   ELEMENT_DATA: Tecnico[] = []
-  tecnicoSelecionado: Tecnico;
+  tecnicoParaDeletar: Tecnico;
+  isModalVisible: boolean = false;
 
   displayedColumns: string[] = ['id', 'nome', 'cpf', 'email', 'acoes'];
   dataSource = new MatTableDataSource<Tecnico>(this.ELEMENT_DATA);
-  tecnicoParaDeletar: Tecnico;
-  isModalVisible: boolean = false;
   
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -62,4 +61,3 @@ export class TecnicoListComponent implements OnInit {
     });
   }
 }
-
