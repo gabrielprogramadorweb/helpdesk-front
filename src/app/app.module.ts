@@ -93,6 +93,9 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
     MatTableModule,
     MatIconModule,
     MatListModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatCardModule,
     ToastrModule.forRoot({
       timeOut: 4000,
