@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
  }
  
  h1 {
@@ -9,4 +10,9 @@
     border: 1px solid rgb(161, 159, 159);
     padding: 1rem 10%;
     border-radius: 2rem;
+ }
+
+ img {
+   width: 40px;
+   height: auto;
  }
