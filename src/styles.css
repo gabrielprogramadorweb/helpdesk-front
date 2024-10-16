@@ -1,18 +1,5 @@
-@import '../node_modules/ngx-toastr/toastr.css';
+/* You can add global styles to this file, and also import other style files */
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  main {
-    min-height: 100vh; /* Isso garante que o conteúdo ocupe toda a altura da tela */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .content {
-    flex: 1; /* Isso faz com que o conteúdo principal se ajuste ao restante da página */
-  }
-  
+@import '../node_modules/ngx-toastr/toastr.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
