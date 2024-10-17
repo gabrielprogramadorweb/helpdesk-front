@@ -22,6 +22,7 @@ img {
    margin-bottom: 1rem;
    display: flex;
    justify-content: space-between;
+   gap: 1rem; 
 }
 
 button {
@@ -35,4 +36,56 @@ p {
 
 mat-icon {
    opacity: .8;
+}
+
+@media (max-width: 768px) {
+   .container {
+      width: 88% !important;
+      padding: 1rem;
+   }
+
+   img {
+      height: 8rem;
+   }
+
+   .section {
+      display: flex;
+      text-align: center;
+      gap: 2rem;
+   }
+
+   .margin {
+      gap: 2;
+   }
+
+   .section mat-checkbox {
+      margin-bottom: 1rem;
+   }
+
+   button {
+      width: 100%;
+      margin-top: 1rem;
+   }
+
+   p {
+      font-size: 0.8rem;
+   }
+}
+
+@media (max-width: 480px) {
+   .container {
+      width: 95%;
+   }
+
+   img {
+      height: 6rem;
+   }
+
+   h1 {
+      font-size: 1.2rem;
+   }
+
+   button {
+      font-size: 0.9rem;
+   }
 }

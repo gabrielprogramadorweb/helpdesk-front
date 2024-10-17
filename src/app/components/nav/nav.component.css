@@ -1,14 +1,12 @@
 .container {
     height: 100%;
     width: 100%;
-    position: relative;
 }
 
 .sidenav {
     width: 13rem;
     color: white;
     background: rgb(37, 2, 49);
-    position: relative;
 }
 
 .sidenav a {

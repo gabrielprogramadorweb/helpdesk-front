@@ -37,13 +37,13 @@ h1 {
 /* Responsivo */
 @media (max-width: 768px) {
    .container {
-      width: 100%;
+      width: 98%;
    }
 
    table {
-      width: 100%;
+      width: 98%;
       display: block;
-      overflow-x: auto;
+      overflow-x: hidden;
    }
 
    th, td {
@@ -56,11 +56,11 @@ h1 {
    }
 
    mat-form-field {
-      width: 100%;
+      width: 98%;
    }
 
    button {
-      width: 100%;
+      width: 98%;
       margin-bottom: 1rem;
    }
 
