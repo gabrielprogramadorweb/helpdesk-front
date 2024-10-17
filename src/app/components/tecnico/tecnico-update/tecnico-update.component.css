@@ -36,3 +36,51 @@ p {
 mat-icon {
    opacity: .8;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+   .container {
+      width: 88% !important;
+      padding: 1rem;
+   }
+
+   img {
+      height: 8rem;
+   }
+
+   .section {
+      display: flex;
+      text-align: center;
+   }
+
+   .section mat-checkbox {
+      margin-bottom: 1rem;
+   }
+
+   button {
+      width: 100%;
+      margin-top: 1rem;
+   }
+
+   p {
+      font-size: 0.8rem;
+   }
+}
+
+@media (max-width: 480px) {
+   .container {
+      width: 88% !important;
+   }
+
+   img {
+      height: 6rem;
+   }
+
+   h1 {
+      font-size: 1.2rem;
+   }
+
+   button {
+      font-size: 0.9rem;
+   }
+}

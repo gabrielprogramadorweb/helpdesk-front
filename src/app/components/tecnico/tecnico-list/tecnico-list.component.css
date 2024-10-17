@@ -38,29 +38,32 @@ h1 {
 @media (max-width: 768px) {
    .container {
       width: 98%;
+      overflow-x: hidden; 
    }
 
    table {
-      width: 98%;
-      display: block;
+      width: 97%;
+      display: table;
+      table-layout: fixed; 
       overflow-x: hidden;
    }
 
    th, td {
-      padding: 6px 8px; 
+      padding: 6px 8px;
       font-size: 0.8rem;
+      word-wrap: break-word; /* Permite quebra de palavras para evitar o estouro da célula */
    }
 
    th {
-      text-align: left; 
+      text-align: left;
    }
 
    mat-form-field {
-      width: 98%;
+      width: 100%;
    }
 
    button {
-      width: 98%;
+      width: 100%;
       margin-bottom: 1rem;
    }
 
@@ -69,36 +72,33 @@ h1 {
       margin-bottom: 1.5rem;
    }
 
-   .mat-elevation-z8 {
-      overflow-x: auto;
-   }
-
    .edit, .delete {
       font-size: 1.2rem;
    }
+
+  
 }
 
 td.mat-cell {
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;
-   padding-right: 8px; 
+   padding-right: 8px;
 }
 
-/* Ajuste de largura das colunas para garantir espaçamento */
 td.mat-cell:nth-child(1) {
-   max-width: 30px; /* ID */
-   padding-right: 20px; /* Aumenta o espaçamento entre ID e Nome */
+   max-width: 40px;
+   padding-right: 20px;
 }
 
 td.mat-cell:nth-child(2) {
-   max-width: 80px; /* Nome */
+   max-width: 100px;
 }
 
 td.mat-cell:nth-child(3) {
-   max-width: 80px; /* CPF */
+   max-width: 100px;
 }
 
 td.mat-cell:nth-child(4) {
-   max-width: 100px; /* Email */
+   max-width: 120px;
 }
