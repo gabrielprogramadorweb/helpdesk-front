@@ -43,8 +43,8 @@ p {
 @media (max-width: 768px) {
 
   .container {
-   width: 72%;
+   width: 86%;
    margin-left: 50%;
-   transform: translateX(-57%);
+   transform: translateX(-50%);
   }
 }

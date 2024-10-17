@@ -50,7 +50,6 @@ img {
     }
 
     .sidenav {
-        position: absolute;
         width: 80%;
         height: 100%;
         z-index: 1000;
@@ -62,7 +61,6 @@ img {
     }
     
     .sidenav-content {
-        position: absolute;
         z-index: 1;
     }
  
