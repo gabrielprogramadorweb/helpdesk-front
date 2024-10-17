@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Chamado } from 'src/app/models/chamado';
@@ -30,20 +30,24 @@ export class ChamadoCreateComponent implements OnInit {
   clientes: Cliente[] = []
   tecnicos: Tecnico[] = []
 
-  prioridade: FormControl = new FormControl(null, [Validators.required]);
-  status:     FormControl = new FormControl(null, [Validators.required]);
-  titulo:     FormControl = new FormControl(null, [Validators.required]);
-  observacoes:FormControl = new FormControl(null, [Validators.required]);
-  tecnico:    FormControl = new FormControl(null, [Validators.required]);
-  cliente:    FormControl = new FormControl(null, [Validators.required]);
+  chamadoForm: FormGroup;
 
   constructor(
     private chamadoService: ChamadoService,
     private clienteService: ClienteService,
     private tecnicoService: TecnicoService,
-    private toastService:    ToastrService,
+    private toastService: ToastrService,
     private router: Router,
-  ) { }
+  ) {
+    this.chamadoForm = new FormGroup({
+      prioridade: new FormControl(null, [Validators.required]),
+      status: new FormControl(null, [Validators.required]),
+      titulo: new FormControl(null, [Validators.required]),
+      observacoes: new FormControl(null, [Validators.required]),
+      tecnico: new FormControl(null, [Validators.required]),
+      cliente: new FormControl(null, [Validators.required]),
+    });
+  }
 
   ngOnInit(): void {
     this.findAllClientes();
@@ -51,31 +55,43 @@ export class ChamadoCreateComponent implements OnInit {
   }
 
   create(): void {
-    this.chamadoService.create(this.chamado).subscribe(resposta => {
-      this.toastService.success('Chamado criado com sucesso', 'Novo chamado');
-      this.router.navigate(['chamados']);
-    }, ex => {
-      console.log(ex);
+    if (this.chamadoForm.valid) {
+      this.chamado = {
+        ...this.chamado,
+        titulo: this.chamadoForm.get('titulo')?.value,
+        status: this.chamadoForm.get('status')?.value,
+        prioridade: this.chamadoForm.get('prioridade')?.value,
+        tecnico: this.chamadoForm.get('tecnico')?.value,
+        cliente: this.chamadoForm.get('cliente')?.value,
+        observacoes: this.chamadoForm.get('observacoes')?.value,
+      };
       
-      this.toastService.error(ex.error.error);
-    })
+      console.log('Dados do chamado:', this.chamado); 
+      
+      this.chamadoService.create(this.chamado).subscribe(resposta => {
+        this.toastService.success('Chamado criado com sucesso', 'Novo chamado');
+        this.router.navigate(['chamados']);
+      }, ex => {
+        console.log(ex);
+        this.toastService.error(ex.error.error);
+      });
+    }
   }
+  
 
   findAllClientes(): void {
     this.clienteService.findAll().subscribe(resposta => {
       this.clientes = resposta;
-    })
+    });
   }
 
   findAllTecnicos(): void {
     this.tecnicoService.findAll().subscribe(resposta => {
       this.tecnicos = resposta;
-    })
+    });
   }
 
   validaCampos(): boolean {
-    return this.prioridade.valid && this.status.valid && this.titulo.valid 
-       && this.observacoes.valid && this.tecnico.valid && this.cliente.valid
+    return this.chamadoForm.valid;
   }
-
 }

@@ -10,18 +10,25 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class NavComponent implements OnInit {
 
+  isMenuOpen: boolean = false; // Controla o ícone exibido
+
   constructor(
     private router: Router,
     private authService: AuthService,
     private toast: ToastrService) { }
 
   ngOnInit(): void {
-    this.router.navigate(['home'])
+    this.router.navigate(['home']);
+  }
+
+  toggleDrawer(drawer: any) {
+    this.isMenuOpen = !this.isMenuOpen; // Alterna o estado do ícone
+    drawer.toggle(); // Abre/Fecha o drawer
   }
 
   logout() {
-    this.router.navigate(['login'])
+    this.router.navigate(['login']);
     this.authService.logout();
-    this.toast.info('Logout realizado com sucesso', 'Logout')
+    this.toast.info('Logout realizado com sucesso', 'Logout');
   }
 }
