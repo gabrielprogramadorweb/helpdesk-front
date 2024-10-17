@@ -43,7 +43,7 @@ p {
 /* Responsividade para telas médias */
 @media (max-width: 768px) {
    .container {
-      width: 154%;
+      width: 99%;
       padding: 1rem;
    }
 
@@ -64,7 +64,7 @@ p {
 /* Responsividade para telas pequenas */
 @media (max-width: 480px) {
    .container {
-      width: 154%;
+      width: 98%;
       padding: 1rem;
    }
 
