@@ -50,3 +50,41 @@ img {
 .search-input:focus {
     border-color: #007bff;
 }
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .header-left {
+        margin-bottom: 1rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.2rem; 
+    }
+
+    img {
+        width: 40px; 
+        margin-left: 48%;
+        transform: translateX(-100%);
+    }
+
+    .header-right {
+        margin-left: 0; 
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .search-input {
+        display: none;
+        width: 100%; 
+        font-size: 0.9rem; 
+    }
+}

@@ -33,3 +33,72 @@ h1 {
 .delete {
    color: red;
 }
+
+/* Responsivo */
+@media (max-width: 768px) {
+   .container {
+      width: 100%;
+   }
+
+   table {
+      width: 100%;
+      display: block;
+      overflow-x: auto;
+   }
+
+   th, td {
+      padding: 6px 8px; 
+      font-size: 0.8rem;
+   }
+
+   th {
+      text-align: left; 
+   }
+
+   mat-form-field {
+      width: 100%;
+   }
+
+   button {
+      width: 100%;
+      margin-bottom: 1rem;
+   }
+
+   h1 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+   }
+
+   .mat-elevation-z8 {
+      overflow-x: auto;
+   }
+
+   .edit, .delete {
+      font-size: 1.2rem;
+   }
+}
+
+td.mat-cell {
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   padding-right: 8px; 
+}
+
+/* Ajuste de largura das colunas para garantir espaçamento */
+td.mat-cell:nth-child(1) {
+   max-width: 30px; /* ID */
+   padding-right: 20px; /* Aumenta o espaçamento entre ID e Nome */
+}
+
+td.mat-cell:nth-child(2) {
+   max-width: 80px; /* Nome */
+}
+
+td.mat-cell:nth-child(3) {
+   max-width: 80px; /* CPF */
+}
+
+td.mat-cell:nth-child(4) {
+   max-width: 100px; /* Email */
+}
