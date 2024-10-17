@@ -51,7 +51,7 @@ h1 {
    th, td {
       padding: 6px 8px;
       font-size: 0.8rem;
-      word-wrap: break-word; /* Permite quebra de palavras para evitar o estouro da célula */
+      word-wrap: break-word; 
    }
 
    th {
@@ -60,6 +60,10 @@ h1 {
 
    mat-form-field {
       width: 100%;
+   }
+
+   mat-label {
+      margin-left: 20px;
    }
 
    button {

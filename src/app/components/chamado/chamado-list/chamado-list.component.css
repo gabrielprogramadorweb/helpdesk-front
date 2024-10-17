@@ -39,3 +39,109 @@ mat-radio-group {
    justify-content: space-around;
    margin-bottom: 1rem;
 }
+
+td.mat-cell:not(:last-child),
+th:not(:last-child) {
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   max-width: 6ch; 
+}
+
+/* Última célula - Ações, ajuste de padding para mover ícones à esquerda */
+td.mat-cell:last-child, th:last-child {
+   white-space: nowrap;
+   text-align: right;
+   padding-right: 5px; 
+   width: auto;
+   margin-right: 8px;
+}
+
+td.mat-cell:last-child i {
+   margin-left: 6px;
+   margin-right: -7px;
+}
+
+td.mat-cell {
+   padding-right: 15px !important;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+   .container {
+      width: 98%;
+      overflow-x: hidden;
+   }
+
+   table {
+      width: 100%;
+      display: table;
+      table-layout: fixed;
+      overflow-x: hidden;
+   }
+
+   th, td {
+      padding: 6px 8px;
+      font-size: 0.8rem;
+   }
+
+   th {
+      text-align: left;
+   }
+
+   mat-form-field {
+      width: 100%;
+   }
+
+   mat-label {
+      margin-left: 20px;
+   }
+
+   button {
+      width: 100%;
+      margin-bottom: 1rem;
+   }
+
+   h1 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+   }
+
+   mat-radio-group {
+      align-items: center;
+   }
+
+   mat-radio-button {
+      margin-bottom: 0.5rem;
+   }
+
+   .edit, .delete {
+      font-size: 1.2rem;
+   }
+
+   .mat-elevation-z8 {
+      overflow-x: hidden;
+   }
+}
+
+@media (max-width: 480px) {
+   .container {
+      width: 100%;
+   }
+
+   th, td {
+      font-size: 0.7rem;
+   }
+
+   h1 {
+      font-size: 1.2rem;
+   }
+
+   button {
+      font-size: 0.9rem;
+   }
+
+   mat-radio-button {
+      font-size: 0.9rem;
+   }
+}

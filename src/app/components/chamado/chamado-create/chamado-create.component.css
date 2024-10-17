@@ -9,7 +9,7 @@
    width: 100%;
 }
 
-h1, img, p{
+h1, img, p {
    text-align: center;
 }
 
@@ -38,4 +38,58 @@ button {
 p {
    margin-top: 3rem;
    opacity: .5;
+}
+
+/* Responsividade para telas médias */
+@media (max-width: 768px) {
+   .container {
+      width: 154%;
+      padding: 1rem;
+   }
+
+   img {
+      height: 12rem;
+   }
+
+   .status-prioridade {
+      flex-direction: column;
+   }
+
+   .status-prioridade mat-form-field {
+      width: 100%;
+      margin-bottom: 1rem;
+   }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+   .container {
+      width: 154%;
+      padding: 1rem;
+   }
+
+   img {
+      height: 10rem;
+   }
+
+   h1 {
+      font-size: 1.5rem;
+   }
+
+   p {
+      font-size: 0.9rem;
+   }
+
+   button {
+      font-size: 0.9rem;
+   }
+
+   .status-prioridade mat-form-field {
+      width: 100%;
+   }
+
+   .observacoes {
+      min-height: 4rem;
+      max-height: 8rem;
+   }
 }
