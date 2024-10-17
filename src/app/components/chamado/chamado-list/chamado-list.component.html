@@ -57,12 +57,20 @@
          <ng-container matColumnDef="acoes">
             <th mat-header-cell *matHeaderCellDef> Ações </th>
             <td mat-cell *matCellDef="let element">
-               <a routerLink="update/{{ element.id }}">
-                  <i class="material-icons edit">edit</i>
-               </a>
-               <a routerLink="read/{{ element.id }}">
-                  <i class="material-icons delete">visibility</i>
-               </a>
+               <!-- Texto inicial para escolha -->
+               <span mat-icon-button [matMenuTriggerFor]="menu">
+                  <mat-icon class="glyphicon" >view_list</mat-icon>
+               </span>
+               <mat-menu #menu="matMenu" class="custom-menu">
+                  <span mat-menu-item [routerLink]="'update/' + element.id">
+                     <mat-icon>edit</mat-icon>
+                     <span>Editar</span>
+                  </span>
+                  <span mat-menu-item [routerLink]="'read/' + element.id">
+                     <mat-icon>visibility</mat-icon>
+                     <span> Ver</span>
+                  </span>
+               </mat-menu>
             </td>
          </ng-container>
 

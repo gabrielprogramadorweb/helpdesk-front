@@ -26,6 +26,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 
 // Componentes do projeto
 import { NavComponent } from './components/nav/nav.component';
@@ -74,6 +75,7 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatMenuModule,
     // Forms
     FormsModule,
     ReactiveFormsModule,

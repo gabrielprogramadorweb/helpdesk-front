@@ -20,6 +20,18 @@ button {
    background-color: green;
 }
 
+.glyphicon {
+   cursor: pointer;
+   margin-left: -5%;
+}
+
+.td.mat-cell {
+   padding-right: 40px !important;
+}
+.th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type  {
+   padding-right: 30px !important;
+}
+
 h1 {
    width: 100%;
    text-align: center;

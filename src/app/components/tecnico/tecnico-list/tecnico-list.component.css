@@ -11,6 +11,11 @@ mat-form-field {
    width: 100%;
 }
 
+.glyphicon {
+   cursor: pointer;
+   margin-left: 5%;
+}
+
 button {
    width: 15%;
    align-items: center;
@@ -26,12 +31,31 @@ h1 {
    margin-bottom: 2rem;
 }
 
-.edit {
-   color: rgb(0, 153, 255);
+/* Customizando o mat-menu */
+.custom-menu {
+   background-color: white !important;
+   color: black !important;
+   cursor: pointer;
 }
 
-.delete {
-   color: red;
+.mat-icon {
+   cursor: pointer;
+}
+
+.custom-menu span {
+   color: black !important;
+   cursor: pointer;
+   background-color: white !important;
+}
+
+.custom-menu mat-icon {
+   color: black !important;
+}
+
+.action-text {
+   margin-right: 10px;
+   font-size: 14px;
+   color: grey;
 }
 
 /* Responsivo */
@@ -75,12 +99,6 @@ h1 {
       font-size: 1.3rem;
       margin-bottom: 1.5rem;
    }
-
-   .edit, .delete {
-      font-size: 1.2rem;
-   }
-
-  
 }
 
 td.mat-cell {
