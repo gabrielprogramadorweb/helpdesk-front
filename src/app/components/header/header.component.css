@@ -5,10 +5,14 @@
     padding: 1rem 2rem;
     width: 94%;
     margin: auto;
-    margin-bottom: 2%;
     background-color: #f8f9fa;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-bottom: 20px !important;
+    z-index: 1000;
 }
 
 .header-left {
@@ -71,9 +75,12 @@ img {
     }
 
     img {
-        width: 40px; 
-        margin-left: 48%;
+    
+        width: 40px;
+        transform: translateY(10px) !important;
+        margin-left: 39%;
         transform: translateX(-100%);
+    
     }
 
     .header-right {

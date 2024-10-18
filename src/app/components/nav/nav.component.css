@@ -28,8 +28,9 @@ img {
     margin: 1rem 0 0 1rem;
     color: white;
     background: linear-gradient(90deg, rgba(201, 6, 46, 1) 0%, rgba(108, 4, 142, 1) 100%);
-    margin-top: -80px !important;
-    position: absolute;
+    margin-top: -77px !important;
+    position: fixed;
+    z-index: 1300;
 }
 
 @media (max-width: 768px) {
@@ -64,6 +65,10 @@ img {
         z-index: 1;
     }
  
+    .menu {
+        margin-top: -85px !important;
+       
+    }
 
     
 }
